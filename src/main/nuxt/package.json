@@ -1,0 +1,22 @@
+{
+  "name": "grpc-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build_proto": "protoc -I=../proto helloworld.proto --js_out=import_style=commonjs_strict:components --grpc-web_out=import_style=commonjs,mode=grpcwebtext:components"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "@grpc/grpc-js": "~1.0.5",
+    "@grpc/proto-loader": "~0.5.4",
+    "google-protobuf": "~3.12.0",
+    "async": "~1.5.2",
+    "grpc-web": "~1.2.1"
+  },
+  "devDependencies": {}
+}

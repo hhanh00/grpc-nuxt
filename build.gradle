@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id "com.lightbend.akka.grpc.gradle" version '1.0.2'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.20'
+}
+
+group = 'me.hanh'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.typesafe.akka:akka-actor-typed_2.12:2.6.10'
+    implementation 'com.typesafe.akka:akka-discovery_2.12:2.6.10'
+    implementation 'com.typesafe.akka:akka-protobuf_2.12:2.6.10'
+    implementation 'com.typesafe.akka:akka-stream_2.12:2.6.10'
+    implementation 'com.typesafe.akka:akka-pki_2.12:2.6.10'
+    implementation 'ch.megard:akka-http-cors_2.12:0.4.2'
+
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
