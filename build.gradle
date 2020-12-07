@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id "com.lightbend.akka.grpc.gradle" version '1.0.2'
     id 'org.jetbrains.kotlin.jvm' version '1.4.20'
+    id 'application'
 }
 
 group = 'me.hanh'
@@ -30,4 +31,8 @@ compileKotlin {
 
 compileTestKotlin {
     kotlinOptions.jvmTarget = '1.8'
+}
+
+application {
+    mainClassName = 'MainKt'
 }
